@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff9ec4,#ffd6e7);
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    margin-top:50px;
+}
+
+.anime{
+    width:250px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+h1{
+    color:white;
+    font-size:50px;
+    animation: glow 1s infinite alternate;
+}
+
+.message{
+    color:white;
+    font-size:28px;
+    margin-top:20px;
+    padding:20px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#ff4f81;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff4f81;
+    color:white;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 25px yellow;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="anime" src="https://i.imgur.com/yY4V7sB.png">
+
+<h1>🎂 Happy Birthday 🎉</h1>
+
+<button onclick="showMessage()">Open Surprise ❤️</button>
+
+<div id="surprise" class="hidden">
+    <div class="message">
+        Happy Birthday to my one and only heart ❤️<br><br>
+        You make every moment beautiful and special ✨<br>
+        May your smile always shine brighter than the stars 🌸
+    </div>
+</div>
+
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("surprise").classList.remove("hidden");
+    alert("🎉 Surprise Opened! Happy Birthday ❤️");
+}
+</script>
+
+</body>
+</html>
